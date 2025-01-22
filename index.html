@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharePlate - Reduce Food Waste, Help Your Community</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SharePlate</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#find">Find Food</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#" id="login-btn">Login</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to SharePlate</h1>
+            <p>Join our community in reducing food waste and helping those in need.</p>
+            <div class="cta-buttons">
+                <a href="#donate" class="cta-button">Donate Food</a>
+                <a href="#find" class="cta-button secondary">Find Food</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About SharePlate</h2>
+            <p>SharePlate is a community-driven platform dedicated to reducing food waste and addressing food insecurity. We connect those with excess food to individuals and organizations in need, creating a more sustainable and caring community.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Share Excess Food</h3>
+                    <p>Donate your surplus food to those who need it most.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Help Your Community</h3>
+                    <p>Make a positive impact in your local area.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Reduce Food Waste</h3>
+                    <p>Contribute to a more sustainable environment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="donate" class="donate">
+            <h2>Donate Food</h2>
+            <form id="donate-form">
+                <input type="text" id="food-name" placeholder="Food Item Name" required>
+                <input type="number" id="quantity" placeholder="Quantity" required>
+                <input type="date" id="expiry-date" required>
+                <textarea id="description" placeholder="Description" required></textarea>
+                <div class="form-row">
+                    <input type="text" id="location" placeholder="Pickup Location" required>
+                    <input type="time" id="pickup-time" required>
+                </div>
+                <button type="submit">Submit Donation</button>
+            </form>
+        </section>
+
+        <section id="find" class="find-food">
+            <h2>Available Food</h2>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for food items...">
+                <button id="search-button">Search</button>
+            </div>
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="grains">Grains</option>
+                    <option value="protein">Protein</option>
+                    <option value="dairy">Dairy</option>
+                </select>
+                <select id="distance-filter">
+                    <option value="">Any Distance</option>
+                    <option value="1">Within 1 mile</option>
+                    <option value="5">Within 5 miles</option>
+                    <option value="10">Within 10 miles</option>
+                </select>
+            </div>
+            <div id="food-list" class="food-grid">
+                <!-- Food items will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="community" class="community">
+            <h2>Community Impact</h2>
+            <div class="impact-stats">
+                <div class="stat">
+                    <span class="stat-number" id="meals-shared">0</span>
+                    <span class="stat-label">Meals Shared</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="waste-reduced">0</span>
+                    <span class="stat-label">lbs of Food Waste Reduced</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="active-users">0</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+            </div>
+            <div class="testimonials">
+                <h3>What Our Community Says</h3>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p>"SharePlate has made it so easy for me to donate my excess food. I feel great knowing I'm helping others and reducing waste!"</p>
+                        <span class="author">- Sarah K., Food Donor</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"As a student on a tight budget, SharePlate has been a lifesaver. I'm eating healthier and saving money!"</p>
+                        <span class="author">- Mike T., Food Recipient</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#find">Find Food</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SharePlate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to SharePlate</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="signup-link">Sign up</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
