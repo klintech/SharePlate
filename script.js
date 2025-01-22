@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Burger Animation
             burger.classList.toggle('toggle');
         });
+
+        // Close nav when a menu item is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-active');
+                burger.classList.remove('toggle');
+            });
+        });
     }
 
     navSlide();
